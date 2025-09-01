@@ -54,31 +54,34 @@ const Home = () => {
           <p className="text-base sm:text-lg md:text-2xl mb-8 text-white/90">
             Premium Pasta for Every Store & Home
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-semolina text-black font-semibold rounded-lg shadow-lg transition hover:scale-105 hover:shadow-xl"
-              asChild
-            >
-              <Link to="/products">Order Now</Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-semolina hover:text-black"
-              asChild
-            >
-              <Link to="/wholesale">Become a Distributor</Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-semolina hover:text-black"
-              asChild
-            >
-              <Link to="/products">Explore Products</Link>
-            </Button>
-          </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+  <Button
+    size="lg"
+    className="bg-semolina text-black font-semibold rounded-lg shadow-lg transition hover:scale-105 hover:shadow-xl w-full sm:w-auto"
+    asChild
+  >
+    <Link to="/products">Order Now</Link>
+  </Button>
+
+  <Button
+    size="lg"
+    variant="outline"
+    className="border-semolina text-semolina hover:bg-semolina hover:text-black w-full sm:w-auto"
+    asChild
+  >
+    <Link to="/wholesale">Become a Distributor</Link>
+  </Button>
+
+  <Button
+    size="lg"
+    variant="outline"
+    className="border-semolina text-semolina hover:bg-semolina hover:text-black w-full sm:w-auto"
+    asChild
+  >
+    <Link to="/products">Explore Products</Link>
+  </Button>
+</div>
+
         </div>
       </section>
 
