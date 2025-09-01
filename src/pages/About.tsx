@@ -2,6 +2,8 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Target, Heart, TrendingUp, Users } from "lucide-react";
+import pastaBg from "@/assets/pasta-hero.jpg";
+
 
 const About = () => {
   const values = [
@@ -34,7 +36,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl font-bold mb-6">
-              About <span className="bg-gradient-hero bg-clip-text text-transparent">Macronica</span>
+              About <span className="bg-semolina bg-clip-text text-transparent">Macronica</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
               Transforming the pasta supply chain to benefit everyone - from bulk suppliers to your dinner table
@@ -130,19 +132,19 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-hero">
+      <section className="py-20" style={{ backgroundImage: `url(${pastaBg})`, backgroundSize: '120%' }}>
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
+          <h2 className="text-4xl font-bold text-black mb-6">
             Want to Be Part of Our Story?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Whether you're a retailer looking for quality products or a consumer seeking great pasta, we'd love to work with you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black" asChild>
+            <Button size="lg" className="text-black bg-semolina hover:opacity-90" asChild>
               <Link to="/wholesale">Partner with Us</Link>
             </Button>
-            <Button size="lg" className="bg-white text-pasta-gold hover:bg-pasta-cream" asChild>
+            <Button size="lg" className="text-black bg-semolina hover:opacity-90" asChild>
               <Link to="/contact">Get in Touch</Link>
             </Button>
           </div>

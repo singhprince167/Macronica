@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { TrendingUp, Package, Users, Truck, DollarSign, Clock, Shield, Star } from "lucide-react";
-import pastaBg from "@/assets/pasta-8068112.jpg";
+import pastaBg from "@/assets/ai-generated-8440246.jpg";
 
 const Wholesale = () => {
   const benefits = [
@@ -47,7 +47,7 @@ const Wholesale = () => {
       price: "₹1,700",
       perPack: "₹85 per pack after discount",
       features: ["Mixed pack sizes", "Monthly billing", "Phone support", "Standard delivery"],
-      cta: "Start Partnership"
+      cta: "Get Custom Quote"
     },
     {
       title: "Established Store",
@@ -56,7 +56,7 @@ const Wholesale = () => {
       price: "₹3,750",
       perPack: "₹75 per pack after discount",
       features: ["Priority restocking", "Weekly billing", "Dedicated manager", "Express delivery"],
-      cta: "Upgrade Now",
+      cta: "Get Custom Quote",
       popular: true
     },
     {
@@ -73,20 +73,20 @@ const Wholesale = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20  text-black" style={{ backgroundImage: `url(${pastaBg})`, backgroundSize: '120%' }}>
+      <section className="py-20  text-white" style={{ backgroundImage: `url(${pastaBg})`, backgroundSize: '120%' }}>
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl font-bold mb-6">
               Partner with Macronica
             </h1>
-            <p className="text-xl mb-8 text-muted-foreground/90">
+            <p className="text-xl mb-8 font-bold">
               Join 500+ successful retailers who trust us for premium pasta at wholesale prices
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-white bg-semolina hover:opacity-90">
+              <Button size="lg" className="text-black bg-semolina hover:opacity-90">
                 <Link to="#pricing">View Pricing</Link>
               </Button>
-              <Button size="lg" className="text-white bg-semolina hover:opacity-90" asChild>
+              <Button size="lg" className="text-black bg-semolina hover:opacity-90" asChild>
                 <Link to="/contact">Get Started Today</Link>
               </Button>
             </div>

@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Package, Star, Truck, Shield } from "lucide-react";
+import pastaBg from "@/assets/pasta-hero.jpg";
+
 
 const Products = () => {
   const products = [
@@ -75,16 +77,16 @@ const Products = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl font-bold mb-6">
-              Our <span className="bg-gradient-hero bg-clip-text text-transparent">Premium Products</span>
+              Our <span className="bg-gradient-hero bg-clip-text text-semolina">Premium Products</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
               Carefully selected pasta varieties in consumer-friendly pack sizes
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Badge variant="secondary" className="px-4 py-2">100g Packs</Badge>
-              <Badge variant="secondary" className="px-4 py-2">200g Packs</Badge>
-              <Badge variant="secondary" className="px-4 py-2">500g Packs</Badge>
-              <Badge variant="secondary" className="px-4 py-2">1kg Packs</Badge>
+              <Badge bg-semolina className="px-4 py-2">100g Packs</Badge>
+              <Badge bg-semolina className="px-4 py-2">200g Packs</Badge>
+              <Badge bg-semolina className="px-4 py-2">500g Packs</Badge>
+              <Badge bg-semolina className="px-4 py-2">1kg Packs</Badge>
             </div>
           </div>
         </div>
@@ -120,7 +122,7 @@ const Products = () => {
                   ))}
                 </div>
                 
-                <Button className="w-full bg-gradient-hero hover:opacity-90" asChild>
+                <Button className="w-full bg-semolina hover:opacity-90" asChild>
                   <Link to="/contact">Order Now</Link>
                 </Button>
               </Card>
@@ -182,7 +184,7 @@ const Products = () => {
                 <div className="text-lg mb-2">{deal.contents}</div>
                 <div className="text-3xl font-bold text-pasta-gold mb-2">{deal.price}</div>
                 <Badge className="mb-4 bg-pasta-green">{deal.savings}</Badge>
-                <Button className="w-full bg-gradient-hero hover:opacity-90" asChild>
+                <Button className="w-full text-black bg-semolina hover:opacity-90" asChild>
                   <Link to="/wholesale">Get Quote</Link>
                 </Button>
               </Card>
@@ -192,7 +194,7 @@ const Products = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-hero">
+      <section className="py-20" style={{ backgroundImage: `url(${pastaBg})`, backgroundSize: '120%' }}>
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Order?
@@ -201,10 +203,10 @@ const Products = () => {
             Get your premium pasta delivered quickly with our reliable supply chain
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black" asChild>
+            <Button size="lg" className="text-black bg-semolina hover:opacity-90" asChild>
               <Link to="/wholesale">Wholesale Inquiry</Link>
             </Button>
-            <Button size="lg" className="bg-white text-pasta-gold hover:bg-pasta-cream" asChild>
+            <Button size="lg" className="text-black bg-semolina hover:opacity-90" asChild>
               <Link to="/contact">Place Order</Link>
             </Button>
           </div>

@@ -7,6 +7,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Phone, Mail, MapPin, Clock, MessageSquare, Package } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import pastaBg from "@/assets/pasta-hero.jpg";
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -93,7 +95,7 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl font-bold mb-6">
-              Get in <span className="bg-gradient-hero bg-clip-text text-transparent">Touch</span>
+              Get in <span className="bg-semolina bg-clip-text text-transparent">Touch</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
               Whether you're a customer or looking to partner with us, we'd love to hear from you
@@ -111,7 +113,7 @@ const Contact = () => {
                 <action.icon className="h-12 w-12 mx-auto mb-4 text-pasta-gold" />
                 <h3 className="text-xl font-semibold mb-2">{action.title}</h3>
                 <p className="text-muted-foreground mb-4">{action.description}</p>
-                <Button className="bg-gradient-hero hover:opacity-90">
+                <Button className="bg-semolina text-black hover:opacity-90">
                   {action.action}
                 </Button>
               </Card>
@@ -192,7 +194,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button type="submit" className="w-full bg-gradient-hero hover:opacity-90" size="lg">
+                <Button type="submit" className="w-full text-black bg-semolina hover:opacity-90" size="lg">
                   Send Message
                 </Button>
               </form>
@@ -276,7 +278,7 @@ const Contact = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-hero">
+      <section className="py-20" style={{ backgroundImage: `url(${pastaBg})`, backgroundSize: '120%' }}>
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Get Started?
@@ -285,10 +287,10 @@ const Contact = () => {
             Don't wait - reach out today and discover why hundreds of customers trust Macronica
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black">
+            <Button size="lg" className="text-black bg-semolina hover:opacity-90">
               Call: +91 98765 43210
             </Button>
-            <Button size="lg" className="bg-white text-pasta-gold hover:bg-pasta-cream">
+            <Button size="lg" className="text-black bg-semolina hover:opacity-90">
               Email: info@qroshious.com
             </Button>
           </div>
