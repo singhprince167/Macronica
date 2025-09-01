@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { TrendingUp, Package, Users, Truck, DollarSign, Clock, Shield, Star } from "lucide-react";
-import pastaBg from "@/assets/ai-generated-8440246.jpg";
+import pastaBg from "@/assets/rigatoni-7384572.jpg";
 
 const Wholesale = () => {
   const benefits = [
@@ -73,7 +73,7 @@ const Wholesale = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20  text-white" style={{ backgroundImage: `url(${pastaBg})`, backgroundSize: '120%' }}>
+      <section className="py-20  text-white" style={{ backgroundImage: `url(${pastaBg})`, backgroundSize: '50%' }}>
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl font-bold mb-6">

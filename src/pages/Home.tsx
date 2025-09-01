@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Package, Users, Award, Truck } from "lucide-react";
 import pastaHero from "@/assets/penne-569072.jpg";
-import pastaBg from "@/assets/scallions-7849575.jpg"; // adjust the path based on your folder
+import pastaBg from "@/assets/rigatoni-7384572.jpg"; // adjust the path based on your folder
 
 const Home = () => {
   const benefits = [
@@ -110,7 +110,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-hero" style={{ backgroundImage: `url(${pastaBg})`, backgroundSize: '120%'  }}>
+      <section className="py-20 bg-gradient-hero" style={{ backgroundImage: `url(${pastaBg})`, backgroundSize: '100%'  }}>
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Partner with Us?
