@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold bg-semolina bg-clip-text text-transparent">
+            <h3 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
               MACRONICA
             </h3>
             <p className="text-muted-foreground text-sm">
@@ -20,13 +20,22 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-semibold text-foreground">Quick Links</h4>
             <div className="space-y-2">
-              <Link to="/about" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link
+                to="/about"
+                className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
                 About Us
               </Link>
-              <Link to="/products" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link
+                to="/products"
+                className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
                 Products
               </Link>
-              <Link to="/recipes" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link
+                to="/recipes"
+                className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
                 Recipes
               </Link>
             </div>
@@ -36,13 +45,22 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-semibold text-foreground">Business</h4>
             <div className="space-y-2">
-              <Link to="/wholesale" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link
+                to="/wholesale"
+                className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
                 Wholesale
               </Link>
-              <Link to="/wholesale" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link
+                to="/wholesale"
+                className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
                 Become a Partner
               </Link>
-              <Link to="/contact" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link
+                to="/contact"
+                className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
                 Get Quote
               </Link>
             </div>
@@ -68,6 +86,7 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Bottom copyright */}
         <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
           <p>&copy; 2025 Macronica. All rights reserved.</p>
         </div>

@@ -40,25 +40,42 @@ const Home = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section 
-        className="relative h-screen flex items-center justify-center bg-cover bg-center"
+        className="relative h-[80vh] md:h-screen flex items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: `url(${pastaHero})` }}
       >
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            From Bulk to <span className="bg-semolina bg-clip-text text-transparent">Bite-Sized</span>
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 text-center text-white max-w-3xl md:max-w-4xl mx-auto px-4">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            From Bulk to{" "}
+            <span className="bg-semolina bg-clip-text text-transparent">
+              Bite-Sized
+            </span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-white/90">
+          <p className="text-base sm:text-lg md:text-2xl mb-8 text-white/90">
             Premium Pasta for Every Store & Home
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="group relative inline-block bg-semolina text-black font-semibold px-6 py-3 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl hover:bg-yellow-200" asChild>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+            <Button
+              size="lg"
+              className="bg-semolina text-black font-semibold rounded-lg shadow-lg transition hover:scale-105 hover:shadow-xl"
+              asChild
+            >
               <Link to="/products">Order Now</Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-black hover:bg-semolina hover:text-black" asChild>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white text-white hover:bg-semolina hover:text-black"
+              asChild
+            >
               <Link to="/wholesale">Become a Distributor</Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-black hover:bg-semolina hover:text-black" asChild>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white text-white hover:bg-semolina hover:text-black"
+              asChild
+            >
               <Link to="/products">Explore Products</Link>
             </Button>
           </div>
@@ -66,21 +83,29 @@ const Home = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-gradient-card">
+      <section className="py-16 sm:py-20 bg-gradient-card">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Why Choose Macronica?</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              We transform bulk pasta into consumer-friendly packs, supporting local retailers while delivering premium quality to every home.
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-4xl font-bold mb-4">
+              Why Choose Macronica?
+            </h2>
+            <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto">
+              We transform bulk pasta into consumer-friendly packs, supporting local
+              retailers while delivering premium quality to every home.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {benefits.map((benefit, index) => (
-              <Card key={index} className="p-6 text-center shadow-card hover:shadow-warm transition-shadow">
-                <benefit.icon className="h-12 w-12 mx-auto mb-4 text-semolina" />
-                <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-                <p className="text-muted-foreground">{benefit.description}</p>
+              <Card
+                key={index}
+                className="p-6 text-center shadow-card hover:shadow-warm transition-shadow"
+              >
+                <benefit.icon className="h-10 w-10 sm:h-12 sm:w-12 mx-auto mb-4 text-semolina" />
+                <h3 className="text-lg sm:text-xl font-semibold mb-2">{benefit.title}</h3>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  {benefit.description}
+                </p>
               </Card>
             ))}
           </div>
@@ -88,21 +113,31 @@ const Home = () => {
       </section>
 
       {/* Product Sizes Section */}
-      <section className="py-20">
+      <section className="py-16 sm:py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Perfect Pack Sizes</h2>
-            <p className="text-xl text-muted-foreground">
-              From individual portions to family meals – we have the right size for every need
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-4xl font-bold mb-4">Perfect Pack Sizes</h2>
+            <p className="text-base sm:text-xl text-muted-foreground">
+              From individual portions to family meals – we have the right size for
+              every need
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {packSizes.map((pack, index) => (
-              <Card key={index} className="p-6 text-center shadow-card hover:shadow-warm transition-all hover:scale-105">
-                <div className="text-3xl font-bold text-semolina mb-2">{pack.size}</div>
-                <div className="text-2xl font-semibold mb-2">{pack.price}</div>
-                <div className="text-muted-foreground">{pack.ideal}</div>
+              <Card
+                key={index}
+                className="p-6 text-center shadow-card hover:shadow-warm transition-all hover:scale-105"
+              >
+                <div className="text-2xl sm:text-3xl font-bold text-semolina mb-2">
+                  {pack.size}
+                </div>
+                <div className="text-xl sm:text-2xl font-semibold mb-2">
+                  {pack.price}
+                </div>
+                <div className="text-sm sm:text-base text-muted-foreground">
+                  {pack.ideal}
+                </div>
               </Card>
             ))}
           </div>
@@ -110,19 +145,31 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-hero" style={{ backgroundImage: `url(${pastaBg})`, backgroundSize: '100%'  }}>
+      <section
+        className="py-16 sm:py-20 bg-gradient-hero bg-cover bg-center"
+        style={{ backgroundImage: `url(${pastaBg})` }}
+      >
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
+          <h2 className="text-2xl sm:text-4xl font-bold text-white mb-4 sm:mb-6">
             Ready to Partner with Us?
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Join hundreds of retailers who trust Macronica for premium pasta at wholesale prices
+          <p className="text-base sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto">
+            Join hundreds of retailers who trust Macronica for premium pasta at
+            wholesale prices
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-semolina text-black hover:opacity-90" asChild>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+            <Button
+              size="lg"
+              className="bg-semolina text-black hover:opacity-90"
+              asChild
+            >
               <Link to="/wholesale">Get Wholesale Pricing</Link>
             </Button>
-            <Button size="lg" className="bg-semolina text-black hover:opacity-90" asChild>
+            <Button
+              size="lg"
+              className="bg-semolina text-black hover:opacity-90"
+              asChild
+            >
               <Link to="/contact">Contact Us Today</Link>
             </Button>
           </div>
